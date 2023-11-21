@@ -1,0 +1,10 @@
+<div class="container mt-4">
+    <form  (submit)="onFormSubmit($event)">
+        <div class="input-group">
+            <input (input)="onInput($event)" name="buscar"  type="text" class="form-control" placeholder=" Ingrese su término de búsqueda para encontrar entradas relacionadas en Wikipedia." >
+            <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+           
+        </div>
+    </form>
+</div>
+

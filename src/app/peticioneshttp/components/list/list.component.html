@@ -1,0 +1,29 @@
+<div class="container mt-3">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        
+        <th class="col">Título</th>
+        <th class="col">Palabras</th>
+        <th scope="col">Resumen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr scope="row" *ngFor="let pag of pages">
+        <td>
+         <a href="https://es.wikipedia.org?curid={{pag.pageid}} " target="_blank">{{pag.title}}</a>
+        </td>
+
+        <td class="col">
+          {{pag.pageid}}
+       </td>
+
+        <td [innerHTML]="pag.snippet" class="col">
+          <!-- {{ sanitizeSnippet(pag.snippet) }} -->
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+
+</div>
